@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-calendar',
+  selector: 'app-calendar-header',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss'],
+  templateUrl: './calendar-header.component.html',
+  styleUrls: ['./calendar-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CalendarComponent {}
+export class CalendarHeaderComponent {}
