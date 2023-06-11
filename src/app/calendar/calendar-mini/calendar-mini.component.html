@@ -1,0 +1,11 @@
+<p>calendar-mini works!</p>
+<table *ngIf="calendar$ | async as calendar">
+  <ng-container *ngFor="let weekDay of calendar | keyvalue">
+    <tr>
+      <th>{{ weekDay.key }}</th>
+    </tr>
+    <tr>
+      <td *ngFor="let day of weekDay.value">{{ day | splitDatePipe }}</td>
+    </tr>
+  </ng-container>
+</table>
