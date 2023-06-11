@@ -1,7 +1,17 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
-import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
 
+const routes = [
+  {
+    path: 'calendar',
+    loadChildren: () =>
+      import('./app/calendar/calendar.routes').then((m) => m.calendarRoutes),
+  },
+];
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes), provideHttpClient()],
+}).catch((err) => console.error(err));

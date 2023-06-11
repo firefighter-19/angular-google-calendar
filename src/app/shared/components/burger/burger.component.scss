@@ -1,0 +1,24 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 12px;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      background: #ebecec;
+      border-radius: 50%;
+    }
+  }
+}
+
+.line {
+  background: #5f6368;
+  width: 18px;
+  height: 2px;
+}
